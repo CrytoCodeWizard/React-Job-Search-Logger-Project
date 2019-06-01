@@ -11,12 +11,9 @@ import Roles from './containers/Roles'
 function App() {
 	return (
 		<div className="App">
-			<header className="App-header">
-				Job Search Logger
-      </header>
-			<Navbar />
 			<BrowserRouter>
 				<Route path="/" component={Home} />
+				<Route component={Navbar} />
 				<Route path="/roles" component={Roles} />
 			</BrowserRouter>
 		</div>
