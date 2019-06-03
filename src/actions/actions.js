@@ -14,7 +14,7 @@ export const getRoles = () => {
 	}
 }
 
-export const selectRole = (event,role) => {
+export const selectRole = (role) => {
 	return dispatch => {
 		return dispatch(setRole(role))
 	}
