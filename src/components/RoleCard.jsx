@@ -1,7 +1,8 @@
 import React from 'react'
-
+import {connect} from 'react-redux'
+import {getRoles} from '../actions/actions'
+import {selectRole} from '../actions/actions'
 import Card from 'react-bootstrap/Card'
-
 
 class RoleCard extends React.Component {
 
@@ -28,4 +29,10 @@ class RoleCard extends React.Component {
 	}
 }
 
-export default RoleCard;
+const mapStateToProps = state => {
+	return {
+		roles: state.roles,
+	}
+}
+
+export default connect(mapStateToProps,{getRoles,selectRole})(RoleCard);
