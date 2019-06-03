@@ -6,10 +6,12 @@ import Role from '../components/Role'
 
 const Roles = () => {
 	return (
-		<CardGroup>
-			<RoleCard />
-		</CardGroup>
-		<Role />
+		<div style={{margin: '5px'}}>
+			<CardGroup>
+				<RoleCard />
+			</CardGroup>
+			<Role />
+		</div>
 	)
 }
 
