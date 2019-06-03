@@ -5,6 +5,7 @@ import {selectRole} from '../actions/actions'
 import Card from 'react-bootstrap/Card'
 
 class RoleCard extends React.Component {
+
 	componentDidMount() {
 		this.props.getRoles()
 	}
@@ -17,7 +18,7 @@ class RoleCard extends React.Component {
 	render() {
 		return (
 			this.props.roles.map(role =>
-				<Card style={{minWidth: '25%',maxwidth: '33%'}}>
+				<Card key={role.id} style={{minWidth: '25%',maxwidth: '33%'}}>
 					<h1 style={{color: 'red'}}>This is the RoleCard component</h1>
 					<Card.Body>
 						<Card.Title>
@@ -35,6 +36,7 @@ class RoleCard extends React.Component {
 		);
 	}
 }
+
 
 const mapStateToProps = state => {
 	return {
