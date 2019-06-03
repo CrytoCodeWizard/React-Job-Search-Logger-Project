@@ -19,7 +19,6 @@ class RoleCard extends React.Component {
 		return (
 			this.props.roles.map(role =>
 				<Card key={role.id} style={{minWidth: '25%',maxwidth: '33%'}}>
-					<h1 style={{color: 'red'}}>This is the RoleCard component</h1>
 					<Card.Body>
 						<Card.Title>
 							<a href={"/roles/" + role.id} onClick={(event) => this.handleClick(event,role)}>{role.title}</a>

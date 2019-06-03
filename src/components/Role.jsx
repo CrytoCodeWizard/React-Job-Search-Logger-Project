@@ -11,7 +11,6 @@ class Role extends Component {
 		} else {
 			return (
 				<Card>
-					<h1 style={{color: 'red'}}>This is the Role component</h1>
 					<Card.Body>
 						<Card.Title>
 							<h2>{this.props.selectedRole.title}</h2>
