@@ -9,6 +9,11 @@ class RoleCard extends React.Component {
 		this.props.getRoles()
 	}
 
+	handleClick = (event,role) => {
+		event.preventDefault()
+		this.props.selectRole(role)
+	}
+
 	render() {
 		return (
 			this.props.roles.map(role =>
@@ -16,7 +21,7 @@ class RoleCard extends React.Component {
 					<h1 style={{color: 'red'}}>This is the RoleCard component</h1>
 					<Card.Body>
 						<Card.Title>
-							<a href={"/roles/" + role.id} onClick={(event,role) => this.props.selectRole(event,role)}>{role.title}</a>
+							<a href={"/roles/" + role.id} onClick={(event) => this.handleClick(event,role)}>{role.title}</a>
 						</Card.Title>
 						<Card.Subtitle>
 							<p>{role.company}  <small>{role.location}</small></p>
