@@ -15,7 +15,6 @@ export const getRoles = () => {
 }
 
 export const selectRole = (event,role) => {
-	event.preventDefault()
 	return dispatch => {
 		return dispatch(setRole(role))
 	}
