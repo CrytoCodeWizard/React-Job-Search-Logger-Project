@@ -10,6 +10,9 @@ const Navbar = () => {
 			<Nav.Item>
 				<Nav.Link eventKey="#roles" href="/roles">Saved Roles</Nav.Link>
 			</Nav.Item>
+			<Nav.Item>
+				<Nav.Link eventKey="#roles/new" href="/roles/new">Add a Role</Nav.Link>
+			</Nav.Item>
 		</Nav>
 	)
 }
