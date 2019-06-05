@@ -38,41 +38,41 @@ class Role extends Component {
 						<Card.Text>
 							<small>{status}</small>
 							<DropdownButton size="sm" id="dropdown-item-button" title={status}>
-								<Dropdown.Item 
+								<Dropdown.Item
 									as="button"
 									value="Interested"
 									onClick={this.handleChange}>
-										Interested
+									Interested
 								</Dropdown.Item>
 								<Dropdown.Item
 									as="button"
 									value="Applied"
 									onClick={this.handleChange}>
-										Applied
+									Applied
 								</Dropdown.Item>
 								<Dropdown.Item
 									as="button"
 									value="Interviewing"
 									onClick={this.handleChange}>
-										Interviewing
+									Interviewing
 								</Dropdown.Item>
 								<Dropdown.Item
 									as="button"
 									value="Successful"
 									onClick={this.handleChange}>
-										Successful
+									Successful
 								</Dropdown.Item>
 								<Dropdown.Item
 									as="button"
 									value="Rejected"
 									onClick={this.handleChange}>
-										Rejected
+									Rejected
 								</Dropdown.Item>
 								<Dropdown.Item
 									as="button"
 									value="Not intereste"
 									onClick={this.handleChange}>
-										Not interested
+									Not interested
 								</Dropdown.Item>
 							</DropdownButton>
 							<br />
@@ -95,4 +95,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps,{getRoles,updateRole})(Role);
-
