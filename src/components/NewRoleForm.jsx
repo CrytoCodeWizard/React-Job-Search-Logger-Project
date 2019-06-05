@@ -21,6 +21,7 @@ class NewRoleForm extends Component {
 
 	handleChange = event => {
 		const {name,value} = event.target
+
 		this.setState({
 			formData: {
 				...this.state.formData,
@@ -31,8 +32,6 @@ class NewRoleForm extends Component {
 
 	handleSubmit = event => {
 		event.preventDefault()
-		// Action to fetch POST to api
-		console.log('Submitted!')
 
 		this.props.addRole(this.state.formData)
 
@@ -53,7 +52,7 @@ class NewRoleForm extends Component {
 		const {title,description,requirements,company,location,status,url} = this.state.formData
 		return (
 			<React.Fragment>
-				This is the New Role Form component
+				<h2>Add a new role:</h2>
 
 				<Form className='form-container' style={{margin: '20px'}} onSubmit={this.handleSubmit}>
 					<Form.Row>
