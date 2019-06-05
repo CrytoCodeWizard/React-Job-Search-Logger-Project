@@ -10,8 +10,9 @@ export default (state = initialState,action) => {
 			return {...state,selectedRole: action.selectedRole}
 		case 'UPDATE_ROLE':
 			return {...state,selectedRole: action.selectedRole}
+		case 'ADD_ROLE':
+			return {...state,roles: action.role}
 		default:
 			return state
 	}
 }
-
