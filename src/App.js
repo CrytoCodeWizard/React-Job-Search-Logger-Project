@@ -6,7 +6,7 @@ import './index.css';
 import Navbar from './components/Navbar'
 import Home from './containers/Home'
 import Roles from './containers/Roles'
-
+import NewRoleForm from './components/NewRoleForm'
 
 function App() {
 	return (
@@ -15,6 +15,7 @@ function App() {
 				<Route path="/" component={Home} />
 				<Route component={Navbar} />
 				<Route path="/roles" component={Roles} />
+				<Route path="/roles/new" component={NewRoleForm} />
 			</BrowserRouter>
 		</div>
 	);
