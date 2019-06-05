@@ -37,25 +37,25 @@ class NewRoleForm extends Component {
 
 				<form onSubmit={this.handleSubmit}>
 					<label>Title</label>
-					<input name="title" placeholder="Job Title" value={title} onChange={this.handleChange} />
+					<input type="text" name="title" placeholder="Job Title" value={title} onChange={this.handleChange} />
 					<br />
 					<label>Description</label>
-					<input name="description" placeholder="Job Description" value={description} onChange={this.handleChange} />
+					<input type="textarea" name="description" placeholder="Job Description" value={description} onChange={this.handleChange} />
 					<br />
 					<label>Requirements</label>
-					<input name="requirements" placeholder="Job Requirements" value={requirements} onChange={this.handleChange} />
+					<input type="textarea" name="requirements" placeholder="Job Requirements" value={requirements} onChange={this.handleChange} />
 					<br />
 					<label>Company</label>
-					<input name="company" placeholder="Company" value={company} onChange={this.handleChange} />
+					<input type="text" name="company" placeholder="Company" value={company} onChange={this.handleChange} />
 					<br />
 					<label>Location</label>
-					<input name="location" placeholder="Location" value={location} onChange={this.handleChange} />
+					<input type="text" name="location" placeholder="Location" value={location} onChange={this.handleChange} />
 					<br />
 					<label>Status</label>
-					<input name="status" placeholder="Status" value={status} onChange={this.handleChange} />
+					<input type="text" name="status" placeholder="Status" value={status} onChange={this.handleChange} />
 					<br />
 					<label>URL</label>
-					<input name="url" placeholder="Posting url" value={url} onChange={this.handleChange} />
+					<input type="text" name="url" placeholder="Posting url" value={url} onChange={this.handleChange} />
 					<br />
 					<button type="submit">Add</button>
 				</form>
