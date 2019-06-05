@@ -8,7 +8,10 @@ export default (state = initialState,action) => {
 			return {...state,roles: action.roles}
 		case "SET_ROLE":
 			return {...state,selectedRole: action.selectedRole}
+		case 'UPDATE_ROLE':
+			return {...state,selectedRole: action.selectedRole}
 		default:
 			return state
 	}
 }
+
