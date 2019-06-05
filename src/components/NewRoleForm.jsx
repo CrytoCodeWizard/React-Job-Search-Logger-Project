@@ -1,7 +1,17 @@
 import React,{Component} from 'react';
 
 class NewRoleForm extends Component {
-	state = {}
+	state = {
+		formData: {
+			title: '',
+			description: '',
+			requirements: [],
+			company: '',
+			location: '',
+			status: 'Interested',
+			url: ''
+		}
+	}
 
 	handleChange = event => {
 		console.log("handling change")
