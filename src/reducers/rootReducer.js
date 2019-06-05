@@ -9,7 +9,9 @@ export default (state = initialState,action) => {
 		case "SET_ROLE":
 			return {...state,selectedRole: action.selectedRole}
 		case 'UPDATE_ROLE':
-			return {...state,selectedRole: action.selectedRole}
+			// const X = map/filter roles to find matching id to selectedRole to get new array
+			return {
+			return {...state,selectedRole: action.selectedRole, roles: X}
 		default:
 			return state
 	}
