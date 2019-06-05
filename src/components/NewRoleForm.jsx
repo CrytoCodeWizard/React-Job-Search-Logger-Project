@@ -3,6 +3,9 @@ import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
+import {connect} from 'react-redux'
+import {addRole} from '../actions/actions'
+
 class NewRoleForm extends Component {
 	state = {
 		formData: {
@@ -30,6 +33,20 @@ class NewRoleForm extends Component {
 		event.preventDefault()
 		// Action to fetch POST to api
 		console.log('Submitted!')
+
+		this.props.addRole(this.state.formData)
+
+		this.setState({
+			formData: {
+				title: '',
+				description: '',
+				requirements: [],
+				company: '',
+				location: '',
+				status: 'Interested',
+				url: ''
+			}
+		})
 	}
 
 	render() {
@@ -81,5 +98,6 @@ class NewRoleForm extends Component {
 		);
 	}
 }
-export default NewRoleForm;
+
+export default connect(null,{addRole})(NewRoleForm);
 
