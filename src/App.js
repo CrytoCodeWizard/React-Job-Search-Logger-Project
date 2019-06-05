@@ -14,7 +14,7 @@ function App() {
 			<BrowserRouter>
 				<Route path="/" component={Home} />
 				<Route component={Navbar} />
-				<Route path="/roles" component={Roles} />
+				<Route exact path="/roles" component={Roles} />
 				<Route path="/roles/new" component={NewRoleForm} />
 			</BrowserRouter>
 		</div>
