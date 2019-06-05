@@ -32,9 +32,13 @@ export const updateRole = (selectedRole,newValue) => {
 			...selectedRole,
 			status: newValue
 		}
+		
+		// 1. fetch PATCH to backend to api/roles/:id
+
 		// console.log(">>>>1 updatedRole:  ",updatedRole)
 		//=>the selectedRole
 		return dispatch(updateRoleAction(updatedRole))
+			// 2. .then( 3. call getRoles())
 	}
 }
 
