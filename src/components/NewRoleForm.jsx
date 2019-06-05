@@ -1,4 +1,7 @@
 import React,{Component} from 'react';
+import Form from 'react-bootstrap/Form'
+import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
 
 class NewRoleForm extends Component {
 	state = {
@@ -35,32 +38,48 @@ class NewRoleForm extends Component {
 			<React.Fragment>
 				This is the New Role Form component
 
-				<form onSubmit={this.handleSubmit}>
-					<label>Title</label>
-					<input type="text" name="title" placeholder="Job Title" value={title} onChange={this.handleChange} />
-					<br />
-					<label>Description</label>
-					<input type="textarea" name="description" placeholder="Job Description" value={description} onChange={this.handleChange} />
-					<br />
-					<label>Requirements</label>
-					<input type="textarea" name="requirements" placeholder="Job Requirements" value={requirements} onChange={this.handleChange} />
-					<br />
-					<label>Company</label>
-					<input type="text" name="company" placeholder="Company" value={company} onChange={this.handleChange} />
-					<br />
-					<label>Location</label>
-					<input type="text" name="location" placeholder="Location" value={location} onChange={this.handleChange} />
-					<br />
-					<label>Status</label>
-					<input type="text" name="status" placeholder="Status" value={status} onChange={this.handleChange} />
-					<br />
-					<label>URL</label>
-					<input type="text" name="url" placeholder="Posting url" value={url} onChange={this.handleChange} />
-					<br />
-					<button type="submit">Add</button>
-				</form>
+				<Form className='form-container' style={{margin: '20px'}} onSubmit={this.handleSubmit}>
+					<Form.Row>
+						<Form.Group as={Col}>
+							<Form.Label>Title</Form.Label>
+							<Form.Control type="text" name="title" placeholder="Job Title..." value={title} onChange={this.handleChange} />
+						</Form.Group>
+						<Form.Group as={Col}>
+							<Form.Label>Company</Form.Label>
+							<Form.Control type="text" name="company" placeholder="Company..." value={company} onChange={this.handleChange} />
+						</Form.Group>
+						<Form.Group as={Col}>
+							<Form.Label>Location</Form.Label>
+							<Form.Control type="text" name="location" placeholder="Location..." value={location} onChange={this.handleChange} />
+						</Form.Group>
+					</Form.Row>
+
+					<Form.Row>
+						<Form.Group as={Col} controlId="formGridDescription">
+							<Form.Label>Description</Form.Label>
+							<Form.Control type="textarea" name="description" placeholder="Job Description" value={description} onChange={this.handleChange} />
+						</Form.Group>
+						<Form.Group as={Col} controlId="formGridRequirements">
+							<Form.Label>Requirements</Form.Label>
+							<Form.Control type="textarea" name="requirements" placeholder="Job Requirements" value={requirements} onChange={this.handleChange} />
+						</Form.Group>
+					</Form.Row>
+
+					<Form.Row>
+						<Form.Group as={Col} controlId="formGridURL">
+							<Form.Label>URL</Form.Label>
+							<Form.Control type="text" name="url" placeholder="Posting url" value={url} onChange={this.handleChange} />
+						</Form.Group>
+						<Form.Group as={Col} controlId="formGridStatus">
+							<Form.Label>Status</Form.Label>
+							<Form.Control type="text" name="status" placeholder="Status" value={status} onChange={this.handleChange} />
+						</Form.Group>
+					</Form.Row>
+					<Button type="submit">Add</Button>
+				</Form>
 			</React.Fragment>
 		);
 	}
 }
 export default NewRoleForm;
+
