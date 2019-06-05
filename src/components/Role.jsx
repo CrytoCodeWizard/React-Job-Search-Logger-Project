@@ -18,6 +18,7 @@ class Role extends Component {
 	handleChange = event => {
 		const value = event.target.value
 		this.props.updateRole(this.props.selectedRole,value)
+		// this.props.getRoles()
 	}
 
 	render() {
@@ -88,6 +89,7 @@ class Role extends Component {
 }
 
 const mapStateToProps = state => {
+	// console.log('!!!!',state)
 	return {
 		selectedRole: state.selectedRole,
 		roles: state.roles
