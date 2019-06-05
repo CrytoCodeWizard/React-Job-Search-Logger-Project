@@ -86,10 +86,6 @@ class Role extends Component {
 							<strong>Requirements: </strong>{req}
 						</Card.Text>
 					</Card.Body>
-					<ButtonToolbar>
-						<Button type="submit">Edit</Button>
-						<Button variant="danger" type="submit">Delete</Button>
-					</ButtonToolbar>
 				</Card>
 			);
 		}
