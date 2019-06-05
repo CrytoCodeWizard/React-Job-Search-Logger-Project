@@ -10,6 +10,10 @@ export const updateRoleAction = role => {
 	return {type: "UPDATE_ROLE",selectedRole: role}
 }
 
+export const addRoleAction = role => {
+	return {type: "ADD_ROLE",role: role}
+}
+
 // ************
 
 export const getRoles = () => {
@@ -35,6 +39,20 @@ export const updateRole = (selectedRole,newValue) => {
 		// console.log(">>>>1 updatedRole:  ",updatedRole)
 		//=>the selectedRole
 		return dispatch(updateRoleAction(updatedRole))
+	}
+}
+
+export const addRole = (role) => {
+	return dispatch => {
+		fetch('http://localhost:3001/api/roles',{
+			method: 'POST',
+			headers: {
+				"Content-Type": 'application/json'
+			},
+			body: JSON.stringify(role)
+		})
+			.then(resp => resp.json())
+			.then(role => dispatch(addRoleAction(role)))
 	}
 }
 
