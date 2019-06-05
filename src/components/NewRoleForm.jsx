@@ -14,7 +14,13 @@ class NewRoleForm extends Component {
 	}
 
 	handleChange = event => {
-		console.log("handling change")
+		const {name,value} = event.target
+		this.setState({
+			formData: {
+				...this.state.formData,
+				[name]: value
+			}
+		})
 	}
 
 	handleSubmit = event => {
