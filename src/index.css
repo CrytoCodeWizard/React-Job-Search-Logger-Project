@@ -26,3 +26,11 @@ code {
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.btn-toolbar {
+	justify-content: center;
+}
+
+.btn {
+	margin: 10px;
+}
