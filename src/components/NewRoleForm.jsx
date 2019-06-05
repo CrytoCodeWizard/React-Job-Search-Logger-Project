@@ -25,6 +25,7 @@ class NewRoleForm extends Component {
 
 	handleSubmit = event => {
 		event.preventDefault()
+		// Action to fetch POST to api
 		console.log('Submitted!')
 	}
 
