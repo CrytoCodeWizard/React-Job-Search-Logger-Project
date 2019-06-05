@@ -2,6 +2,8 @@ import React,{Component} from 'react'
 import Card from 'react-bootstrap/Card'
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
+import Button from 'react-bootstrap/Button'
 
 import {connect} from 'react-redux'
 import {updateRole,getRoles} from '../actions/actions'
@@ -82,6 +84,10 @@ class Role extends Component {
 							<strong>Requirements: </strong>{req}
 						</Card.Text>
 					</Card.Body>
+					<ButtonToolbar>
+						<Button type="submit">Edit</Button>
+						<Button variant="danger" type="submit">Delete</Button>
+					</ButtonToolbar>
 				</Card>
 			);
 		}
