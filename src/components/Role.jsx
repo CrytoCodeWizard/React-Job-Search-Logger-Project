@@ -5,6 +5,8 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import Button from 'react-bootstrap/Button'
 
+import '../index.css'
+
 import {connect} from 'react-redux'
 import {updateRole,getRoles} from '../actions/actions'
 
