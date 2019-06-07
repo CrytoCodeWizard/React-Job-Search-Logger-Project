@@ -17,7 +17,7 @@ code {
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #1E3F4F;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -33,4 +33,30 @@ code {
 
 .btn {
 	margin: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #1E3F4F;
+}
+
+footer > * {
+	margin: 1rem;
+	padding-left: 30px;
+  color: #6c8997;
+}
+
+footer a {
+		float: left;
+    text-align: start;
+}
+
+footer p {
+    text-align: end;
 }
