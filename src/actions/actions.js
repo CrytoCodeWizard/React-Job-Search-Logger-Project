@@ -14,8 +14,6 @@ export const addRoleAction = role => {
 	return {type: "ADD_ROLE",role: role}
 }
 
-// ************
-
 export const getRoles = () => {
 	return dispatch => {
 		return fetch("http://localhost:3001/api/roles")
@@ -36,13 +34,15 @@ export const updateRole = (selectedRole,newValue) => {
 			...selectedRole,
 			status: newValue
 		}
-		
-		// 1. fetch PATCH to backend to api/roles/:id
-
-		// console.log(">>>>1 updatedRole:  ",updatedRole)
-		//=>the selectedRole
-		return dispatch(updateRoleAction(updatedRole))
-			// 2. .then( 3. call getRoles())
+		fetch(`http://localhost:3001/api/roles/${selectedRole.id}`,{
+			method: 'PATCH',
+			headers: {
+				"Content-Type": 'application/json'
+			},
+			body: JSON.stringify(updatedRole)
+		})
+			.then(resp => resp.json())
+			.then(role => dispatch(updateRoleAction(role)))
 	}
 }
 
@@ -59,10 +59,3 @@ export const addRole = (role) => {
 			.then(role => dispatch(addRoleAction(role)))
 	}
 }
-
-
-// I also need to change the roles array in state to replace the old role with the updated role.
-// I will need to update the state in the reducer
-	// -- can I do it at the same time I process the slectedRole change or does this need to be a separate action/reducer?
-//  I will also need to fetch and PATCH the updated role to persist
-// -- This PATCH should fetch to api/roles/:id rather than api/roles
