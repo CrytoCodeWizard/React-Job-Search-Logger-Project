@@ -13,6 +13,9 @@ const Navbar = () => {
 			<Nav.Item>
 				<Nav.Link eventKey="#roles/new" href="/roles/new">Add a Role</Nav.Link>
 			</Nav.Item>
+			<Nav.Item>
+				<Nav.Link eventKey="#roles/search" href="/roles/search">Search Roles By Status</Nav.Link>
+			</Nav.Item>
 		</Nav>
 	)
 }
