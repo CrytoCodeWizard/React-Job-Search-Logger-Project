@@ -4,6 +4,8 @@ import {getRoles} from '../actions/actions'
 import {selectRole} from '../actions/actions'
 import Card from 'react-bootstrap/Card'
 
+import SearchRoles from './SearchRoles'
+
 class RoleCard extends React.Component {
 
 	componentDidMount() {
@@ -17,22 +19,27 @@ class RoleCard extends React.Component {
 
 	render() {
 		return (
-			this.props.roles.map(role =>
-				<Card key={role.id} style={{minWidth: '25%',maxwidth: '33%'}}>
-					<Card.Body>
-						<Card.Title>
-							<a href={"/roles/" + role.id} onClick={(event) => this.handleClick(event,role)}>{role.title}</a>
-						</Card.Title>
-						<Card.Subtitle>
-							<p>{role.company}  <small>{role.location}</small></p>
-						</Card.Subtitle>
-						<Card.Text>
-							<small>Status: {role.status}</small>
-						</Card.Text>
-					</Card.Body>
-				</Card >
-			)
-		);
+			<>
+				{this.props.roles.map(role =>
+					<Card key={role.id} style={{minWidth: '25%',maxwidth: '33%'}}>
+						<Card.Body>
+							<Card.Title>
+								<a href={"/roles/" + role.id} onClick={(event) => this.handleClick(event,role)}>{role.title}</a>
+							</Card.Title>
+							<Card.Subtitle>
+								<p>{role.company}  <small>{role.location}</small></p>
+							</Card.Subtitle>
+							<Card.Text>
+								<small>Status: {role.status}</small>
+							</Card.Text>
+						</Card.Body>
+					</Card >
+				)}
+				<div id="searchComp">
+					<SearchRoles />
+				</div>
+			</>
+		)
 	}
 }
 
