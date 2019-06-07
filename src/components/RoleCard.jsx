@@ -4,6 +4,8 @@ import {getRoles} from '../actions/actions'
 import {selectRole} from '../actions/actions'
 import Card from 'react-bootstrap/Card'
 
+import '../index.css'
+
 import SearchRoles from './SearchRoles'
 
 class RoleCard extends React.Component {
