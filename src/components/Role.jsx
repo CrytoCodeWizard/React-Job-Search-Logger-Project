@@ -2,27 +2,17 @@ import React,{Component} from 'react'
 import Card from 'react-bootstrap/Card'
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
-import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
-import Button from 'react-bootstrap/Button'
 
 import '../index.css'
 
 import {connect} from 'react-redux'
-import {updateRole,getRoles} from '../actions/actions'
-
+import {updateRole} from '../actions/actions'
 
 class Role extends Component {
 
-	componentDidMount() {
-		console.log('!!!! 1 selectedRole',this.props.selectedRole)
-		console.log('!!!! 2 roles',this.props.roles)
-		this.props.getRoles()
-		console.log("!!!!3 roles: ",this.props.roles)
-	}
 	handleChange = event => {
 		const value = event.target.value
 		this.props.updateRole(this.props.selectedRole,value)
-		// this.props.getRoles()
 	}
 
 	render() {
@@ -93,11 +83,10 @@ class Role extends Component {
 }
 
 const mapStateToProps = state => {
-	// console.log('!!!!',state)
 	return {
 		selectedRole: state.selectedRole,
 		roles: state.roles
 	}
 }
 
-export default connect(mapStateToProps,{getRoles,updateRole})(Role);
+export default connect(mapStateToProps,{updateRole})(Role);
