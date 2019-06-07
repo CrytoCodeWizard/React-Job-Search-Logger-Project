@@ -78,6 +78,11 @@ class NewRoleForm extends Component {
 						<Form.Group as={Col} controlId="formGridRequirements">
 							<Form.Label>Requirements</Form.Label>
 							<Form.Control type="textarea" name="requirements" placeholder="Job Requirements" value={requirements} onChange={this.handleChange} />
+
+							{/* COULD ADD A NEW FIELD TO ENTER A NEW REQUIREMENT ON CLICK */}
+							<Button onClick={this.handleAddRequest}>Add Requirement </Button>
+							{/*  */}
+
 						</Form.Group>
 					</Form.Row>
 
