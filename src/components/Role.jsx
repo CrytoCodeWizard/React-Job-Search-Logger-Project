@@ -65,7 +65,7 @@ class Role extends Component {
 								</Dropdown.Item>
 								<Dropdown.Item
 									as="button"
-									value="Not intereste"
+									value="Not interested"
 									onClick={this.handleChange}>
 									Not interested
 								</Dropdown.Item>
