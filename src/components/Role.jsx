@@ -1,12 +1,12 @@
 import React,{Component} from 'react'
 import Card from 'react-bootstrap/Card'
-import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 
 import '../index.css'
 
 import {connect} from 'react-redux'
 import {updateRole} from '../actions/actions'
+import StatusButton from './StatusButton'
 
 class Role extends Component {
 
@@ -33,42 +33,7 @@ class Role extends Component {
 						<Card.Text>
 							<small>{status}</small>
 							<DropdownButton size="sm" id="dropdown-item-button" title={status}>
-								<Dropdown.Item
-									as="button"
-									value="Interested"
-									onClick={this.handleChange}>
-									Interested
-								</Dropdown.Item>
-								<Dropdown.Item
-									as="button"
-									value="Applied"
-									onClick={this.handleChange}>
-									Applied
-								</Dropdown.Item>
-								<Dropdown.Item
-									as="button"
-									value="Interviewing"
-									onClick={this.handleChange}>
-									Interviewing
-								</Dropdown.Item>
-								<Dropdown.Item
-									as="button"
-									value="Successful"
-									onClick={this.handleChange}>
-									Successful
-								</Dropdown.Item>
-								<Dropdown.Item
-									as="button"
-									value="Rejected"
-									onClick={this.handleChange}>
-									Rejected
-								</Dropdown.Item>
-								<Dropdown.Item
-									as="button"
-									value="Not interested"
-									onClick={this.handleChange}>
-									Not interested
-								</Dropdown.Item>
+								<StatusButton onClick={this.handleChange} />
 							</DropdownButton>
 							<br />
 							{description}
