@@ -7,7 +7,7 @@ import Navbar from './components/Navbar'
 import Home from './containers/Home'
 import Roles from './containers/Roles'
 import NewRoleForm from './components/NewRoleForm'
-import Footer from './containers/Footer'
+import Footer from './components/Footer'
 
 function App() {
 	return (
