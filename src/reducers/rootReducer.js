@@ -14,6 +14,12 @@ export default (state = initialState,action) => {
 			return {selectedRole: action.selectedRole,roles: [...state.roles.slice(0,index),action.selectedRole,...state.roles.slice(index + 1)]}
 		case 'ADD_ROLE':
 			return {...state,roles: action.role}
+
+
+		case "RESET_ROLE":
+			return {...state,selectedRole: action.selectedRole}
+
+
 		default:
 			return state
 	}
