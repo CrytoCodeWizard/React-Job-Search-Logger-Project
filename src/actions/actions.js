@@ -6,10 +6,6 @@ export const setRoleAction = role => {
 	return {type: "SET_ROLE",selectedRole: role}
 }
 
-export const resetSelectedRoleAction = () => {
-	return {type: "RESET_ROLE",selectedRole: null}
-}
-
 export const updateRoleAction = role => {
 	return {type: "UPDATE_ROLE",selectedRole: role}
 }
