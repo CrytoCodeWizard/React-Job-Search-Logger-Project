@@ -15,8 +15,8 @@ function App() {
 		<div className="App">
 			<Header />
 			<BrowserRouter>
-				<Route path="/" component={Home} />
 				<Route component={Navbar} />
+				<Route path="/" component={Home} />
 				<Route exact path="/roles" component={Roles} />
 				<Route path="/roles/new" component={NewRoleForm} />
 			</BrowserRouter>
