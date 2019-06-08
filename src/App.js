@@ -16,7 +16,7 @@ function App() {
 			<Header />
 			<BrowserRouter>
 				<Route component={Navbar} />
-				<Route path="/" component={Home} />
+				<Route exact path="/" component={Home} />
 				<Route exact path="/roles" component={Roles} />
 				<Route path="/roles/new" component={NewRoleForm} />
 			</BrowserRouter>
