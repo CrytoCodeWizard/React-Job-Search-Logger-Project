@@ -2,11 +2,14 @@ const initialState = {
 	roles: [],
 	selectedRole: null
 }
+
 export default (state = initialState,action) => {
 	switch(action.type) {
 		case "SET_ROLES":
 			return {...state,roles: action.roles}
 		case "SET_ROLE":
+			return {...state,selectedRole: action.selectedRole}
+		case "RESET_ROLE":
 			return {...state,selectedRole: action.selectedRole}
 		case 'UPDATE_ROLE':
 			const matchedRole = state.roles.find(r => r.id === action.selectedRole.id)
@@ -14,12 +17,6 @@ export default (state = initialState,action) => {
 			return {selectedRole: action.selectedRole,roles: [...state.roles.slice(0,index),action.selectedRole,...state.roles.slice(index + 1)]}
 		case 'ADD_ROLE':
 			return {...state,roles: action.role}
-
-
-		case "RESET_ROLE":
-			return {...state,selectedRole: action.selectedRole}
-
-
 		default:
 			return state
 	}
