@@ -59,3 +59,14 @@ export const addRole = (role) => {
 			.then(role => dispatch(addRoleAction(role)))
 	}
 }
+
+
+
+export const resetSelectedRoleAction = () => {
+	return {type: "RESET_ROLE",selectedRole: null}
+}
+export const resetSelectedRole = () => {
+	return dispatch => {
+		return dispatch(setRoleAction())
+	}
+}
