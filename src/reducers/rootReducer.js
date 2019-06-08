@@ -9,8 +9,6 @@ export default (state = initialState,action) => {
 			return {...state,roles: action.roles}
 		case "SET_ROLE":
 			return {...state,selectedRole: action.selectedRole}
-		case "RESET_ROLE":
-			return {...state,selectedRole: action.selectedRole}
 		case 'UPDATE_ROLE':
 			const matchedRole = state.roles.find(r => r.id === action.selectedRole.id)
 			const index = state.roles.indexOf(matchedRole)
