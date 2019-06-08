@@ -35,6 +35,9 @@ code {
 	margin: 10px;
 }
 
+#roles-comp {
+margin: 5px;
+}
 /* SEARCH COMPONENT */
 #searchComp {
 	margin: 1rem;
