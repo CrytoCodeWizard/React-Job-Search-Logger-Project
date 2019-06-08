@@ -2,10 +2,11 @@ import React from 'react';
 
 const Home = () => {
 	return (
-		<header className="App-header">
-			<h1>Job Search Logger</h1>
-			{/* <p>Keep organised during your job search</p> */}
-		</header>
+		<div id='home-comp'>
+			<h1>Wecome to Job Search Logger</h1>
+			<p>Add job postings and keep track of their status during your job search process</p>
+			<p><strong>You can view saved roles or create new entries via the links in the navigation bar above!</strong></p>
+		</div>
 	)
 }
 export default Home
