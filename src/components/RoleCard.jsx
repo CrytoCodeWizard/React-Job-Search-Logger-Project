@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {getRoles} from '../actions/actions'
-import {selectRole} from '../actions/actions'
+import {selectRole,resetSelectedRole} from '../actions/actions'
 import Card from 'react-bootstrap/Card'
 
 import '../index.css'
@@ -26,6 +26,7 @@ class RoleCard extends React.Component {
 		this.setState({
 			searchValue: value
 		})
+		this.props.resetSelectedRole()
 	}
 
 	render() {
@@ -95,8 +96,8 @@ class RoleCard extends React.Component {
 
 const mapStateToProps = state => {
 	return {
-		roles: state.roles,
+		roles: state.roles
 	}
 }
 
-export default connect(mapStateToProps,{getRoles,selectRole})(RoleCard);
+export default connect(mapStateToProps,{getRoles,selectRole,resetSelectedRole})(RoleCard);
