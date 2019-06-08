@@ -35,6 +35,21 @@ class NewRoleForm extends Component {
 
 		this.props.addRole(this.state.formData)
 
+		this.resetLocalState()
+		// this.setState({
+		// 	formData: {
+		// 		title: '',
+		// 		description: '',
+		// 		requirements: [],
+		// 		company: '',
+		// 		location: '',
+		// 		status: 'Interested',
+		// 		url: ''
+		// 	}
+		// })
+	}
+
+	resetLocalState = () => {
 		this.setState({
 			formData: {
 				title: '',
