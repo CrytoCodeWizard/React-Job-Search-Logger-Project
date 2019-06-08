@@ -9,7 +9,6 @@ import {updateRole} from '../actions/actions'
 import StatusButton from './StatusButton'
 
 class Role extends Component {
-
 	handleChange = event => {
 		const value = event.target.value
 		this.props.updateRole(this.props.selectedRole,value)
