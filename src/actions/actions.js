@@ -6,6 +6,10 @@ export const setRoleAction = role => {
 	return {type: "SET_ROLE",selectedRole: role}
 }
 
+export const resetSelectedRoleAction = () => {
+	return {type: "RESET_ROLE",selectedRole: null}
+}
+
 export const updateRoleAction = role => {
 	return {type: "UPDATE_ROLE",selectedRole: role}
 }
@@ -25,6 +29,12 @@ export const getRoles = () => {
 export const selectRole = (role) => {
 	return dispatch => {
 		return dispatch(setRoleAction(role))
+	}
+}
+
+export const resetSelectedRole = () => {
+	return dispatch => {
+		return dispatch(setRoleAction())
 	}
 }
 
@@ -57,16 +67,5 @@ export const addRole = (role) => {
 		})
 			.then(resp => resp.json())
 			.then(role => dispatch(addRoleAction(role)))
-	}
-}
-
-
-
-export const resetSelectedRoleAction = () => {
-	return {type: "RESET_ROLE",selectedRole: null}
-}
-export const resetSelectedRole = () => {
-	return dispatch => {
-		return dispatch(setRoleAction())
 	}
 }
