@@ -28,8 +28,8 @@ class RoleCard extends React.Component {
 		this.props.resetSelectedRole()
 	}
 
-	render() {
-		const allRoles = this.props.roles.map(role =>
+	cardFound = role => {
+		return (
 			<Card key={role.id} style={{minWidth: '25%',maxwidth: '33%'}}>
 				<Card.Body>
 					<Card.Title>
@@ -44,6 +44,10 @@ class RoleCard extends React.Component {
 				</Card.Body>
 			</Card >
 		)
+	}
+
+	render() {
+		const allRoles = this.props.roles.map(role => this.cardFound(role))
 
 		const filteredRoles = this.props.roles.filter(role => role.status === this.state.searchValue)
 
@@ -52,23 +56,12 @@ class RoleCard extends React.Component {
 				{
 					filteredRoles.map(role => {
 						if(filteredRoles.length > 0) {
-							return (<Card key={role.id} style={{minWidth: '25%',maxwidth: '33%'}}>
-								<Card.Body>
-									<Card.Title>
-										<a href={"/roles/" + role.id} onClick={(event) => this.handleClick(event,role)}>{role.title}</a>
-									</Card.Title>
-									<Card.Subtitle>
-										<p>{role.company}  <small>{role.location}</small></p>
-									</Card.Subtitle>
-									<Card.Text>
-										<small>Status: {role.status}</small>
-									</Card.Text>
-								</Card.Body>
-							</Card >)
+							return this.cardFound(role)
 						}
 					})
 				}
 			</>
+			
 		const selectedNotFoundRoles =
 			<>
 				<Card>
