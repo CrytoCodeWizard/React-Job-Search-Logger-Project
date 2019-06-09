@@ -22,7 +22,7 @@ To use the application please clone the repositories and run the servers for bot
 
 Clone from Github:
 * `$ git clone git@github.com:Nadiafa/job-search-logger-frontend.git`
-Execute:
+Execute from project directory:
 * Run `npm install`
 * Run `npm start`
 * If not done automatically, open 'localhost:3000' in browser
