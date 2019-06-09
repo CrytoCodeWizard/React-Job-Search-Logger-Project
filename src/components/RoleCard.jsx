@@ -46,6 +46,18 @@ class RoleCard extends React.Component {
 		)
 	}
 
+	cardNotFound = () => {
+		return (
+			<Card>
+				<Card.Body>
+					<Card.Title>
+						There are no results for Roles with '{this.state.searchValue}' status
+					</Card.Title>
+				</Card.Body>
+			</Card>
+		)
+	}
+
 	render() {
 		const allRoles = this.props.roles.map(role => this.cardFound(role))
 
@@ -61,17 +73,8 @@ class RoleCard extends React.Component {
 					})
 				}
 			</>
-			
-		const selectedNotFoundRoles =
-			<>
-				<Card>
-					<Card.Body>
-						<Card.Text>
-							<p>There are no results for Roles with '{this.state.searchValue}' status</p>
-						</Card.Text>
-					</Card.Body>
-				</Card>
-			</>
+
+		const selectedNotFoundRoles = this.cardNotFound()
 
 		const selectedRoles = (filteredRoles.length > 0) ? selectedFoundRoles : selectedNotFoundRoles
 
