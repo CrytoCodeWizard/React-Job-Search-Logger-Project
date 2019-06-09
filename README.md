@@ -2,13 +2,13 @@
 
 Job Search Logger is application designed to help keep track of job posting during a job search.
 
-The application allows for roles to be saved with a status that can be changed as the process progresses.
+The application allows for roles/job postings to be saved with a status that can be changed as the job search process progresses.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Initial requirements to run the App
 
-This applicaiton requires backend and front end application which are logged in separate repos in GitHub.
+This application requires backend and front end applications which are logged in separate repos in GitHub.
 
 This document is part of the frontend:
 https://github.com/Nadiafa/job-search-logger-frontend
@@ -21,9 +21,9 @@ To use the application please clone the repositories and run the servers for bot
 ## Installation
 
 Clone from Github:
-* `$ git clone git@github.com:Nadiafa/gastronomiconWJS.git`
+* `$ git clone git@github.com:Nadiafa/job-search-logger-frontend.git`
 Execute:
-* Run `npm install`   <!-- ??  -->
+* Run `npm install`
 * Run `npm start`
 * If not done automatically, open 'localhost:3000' in browser
 
