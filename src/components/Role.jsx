@@ -30,7 +30,6 @@ class Role extends Component {
 							{company}
 						</Card.Subtitle>
 						<Card.Text>
-							<small>{status}</small>
 							<DropdownButton size="sm" id="dropdown-item-button" title={status}>
 								<StatusButton onClick={this.handleChange} />
 							</DropdownButton>
