@@ -29,7 +29,7 @@ class Role extends Component {
 						<Card.Subtitle>
 							{company}
 						</Card.Subtitle>
-						<Card.Text>
+						<Card.Text as='div'>
 							<DropdownButton size="sm" id="dropdown-item-button" title={status}>
 								<StatusButton onClick={this.handleChange} />
 							</DropdownButton>
