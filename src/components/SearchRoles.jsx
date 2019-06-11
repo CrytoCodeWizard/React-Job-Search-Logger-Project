@@ -11,11 +11,11 @@ const SearchRoles = ({handleSearchChange}) => {
 
 	const statuses = ["All","Interested","Applied","Interviewing","Successful","Rejected","Not Interested"]
 
-	const optionList = statuses.map(opt => {
+	const optionList = statuses.map((opt,i) => {
 		if(opt === "All") {
-			return <option value="">{opt}</option>
+			return <option key={i} value="">{opt}</option>
 		}
-		return <option value={opt}>{opt}</option>
+		return <option key={i} value={opt}>{opt}</option>
 	})
 
 	return (
