@@ -19,6 +19,30 @@ class NewRoleForm extends Component {
 		}
 	}
 
+	validateForm = (formData) => {
+		let alerts_array = []
+
+		if(formData.title.length <= 0) {
+			alerts_array.push("Title cannot be empty")
+		}
+		if(formData.description.length <= 0) {
+			alerts_array.push("Description cannot be empty")
+		}
+		if(formData.requirements.length <= 0) {
+			alerts_array.push("Requirements cannot be empty")
+		}
+		if(formData.company.length <= 0) {
+			alerts_array.push("Company cannot be empty")
+		}
+		if(formData.location.length <= 0) {
+			alerts_array.push("Location cannot be empty")
+		}
+		if(formData.url.length <= 0) {
+			alerts_array.push("Url cannot be empty")
+		}
+		return alerts_array
+	}
+
 	handleChange = event => {
 		const {name,value} = event.target
 		this.setState({
@@ -31,7 +55,13 @@ class NewRoleForm extends Component {
 
 	handleSubmit = event => {
 		event.preventDefault()
-		this.props.addRole(this.state.formData)
+		const validatedArray = this.validateForm(this.state.formData)
+		if(validatedArray.length > 0) {
+			console.log(validatedArray)
+			alert(validatedArray.join('  |  '))
+		} else {
+			this.props.addRole(this.state.formData)
+		}
 		this.resetLocalState()
 	}
 
