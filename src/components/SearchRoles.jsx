@@ -5,7 +5,7 @@ import '../index.css'
 
 const SearchRoles = ({handleSearchChange}) => {
 	const handleOptionChange = event => {
-		const newValue = event.nativeEvent.target.value
+		const newValue = event.target.value
 		handleSearchChange(newValue)
 	}
 
