@@ -21,25 +21,12 @@ class NewRoleForm extends Component {
 
 	validateForm = (formData) => {
 		let alerts_array = []
-
-		if(formData.title.length <= 0) {
-			alerts_array.push("Title cannot be empty")
-		}
-		if(formData.description.length <= 0) {
-			alerts_array.push("Description cannot be empty")
-		}
-		if(formData.requirements.length <= 0) {
-			alerts_array.push("Requirements cannot be empty")
-		}
-		if(formData.company.length <= 0) {
-			alerts_array.push("Company cannot be empty")
-		}
-		if(formData.location.length <= 0) {
-			alerts_array.push("Location cannot be empty")
-		}
-		if(formData.url.length <= 0) {
-			alerts_array.push("Url cannot be empty")
-		}
+		const entries = Object.entries(formData)
+		entries.map((e,i) => {
+			if(e[1].length <= 0) {
+				alerts_array.push(`${e[0].charAt(0).toUpperCase() + e[0].slice(1)} cannot be empty`)
+			}
+		})
 		return alerts_array
 	}
 
