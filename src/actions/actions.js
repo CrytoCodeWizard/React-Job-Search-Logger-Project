@@ -62,6 +62,15 @@ export const addRole = (role) => {
 			body: JSON.stringify(role)
 		})
 			.then(resp => resp.json())
-			.then(role => dispatch(addRoleAction(role)))
+			.then(role => {
+				if(role.message) {
+					const messages = Object.entries(role.message)
+					alert(messages.map(m =>
+						`${m[0].toUpperCase()}: ${m[1]}`
+					).join('  |  '))
+				} else {
+					dispatch(addRoleAction(role))
+				}
+			})
 	}
 }
