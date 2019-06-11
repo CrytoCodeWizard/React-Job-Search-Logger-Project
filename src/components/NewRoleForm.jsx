@@ -21,7 +21,6 @@ class NewRoleForm extends Component {
 
 	handleChange = event => {
 		const {name,value} = event.target
-
 		this.setState({
 			formData: {
 				...this.state.formData,
@@ -52,6 +51,13 @@ class NewRoleForm extends Component {
 
 	render() {
 		const {title,description,requirements,company,location,status,url} = this.state.formData
+
+		const statuses = ["Interested","Applied","Interviewing","Successful","Rejected","Not Interested"]
+
+		const optionList = statuses.map((opt,i) => {
+			return <option key={i} value={opt}>{opt}</option>
+		})
+
 		return (
 			<React.Fragment>
 				<h2>Add a new role:</h2>
@@ -90,7 +96,9 @@ class NewRoleForm extends Component {
 						</Form.Group>
 						<Form.Group as={Col} controlId="formGridStatus">
 							<Form.Label>Status</Form.Label>
-							<Form.Control type="text" name="status" placeholder="Status" value={status} onChange={this.handleChange} />
+							<Form.Control as="select" name="status" onChange={this.handleChange}>
+								{optionList}
+							</Form.Control >
 						</Form.Group>
 					</Form.Row>
 					<Button type="submit">Add</Button>
