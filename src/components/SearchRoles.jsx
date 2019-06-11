@@ -9,22 +9,27 @@ const SearchRoles = ({handleSearchChange}) => {
 		handleSearchChange(newValue)
 	}
 
+	const statuses = ["All","Interested","Applied","Interviewing","Successful","Rejected","Not Interested"]
+
+	const optionList = statuses.map(opt => {
+		if(opt === "All") {
+			return <option value="">{opt}</option>
+		}
+		return <option value={opt}>{opt}</option>
+	})
+
 	return (
-		<>
-			<Form onChange={handleOptionChange} >
-				<Form.Label>Search by status:</Form.Label>
-				<Form.Control as="select">
-					<option value="">All</option>
-					<option value="Interested">Interested</option>
-					<option value="Applied">Applied</option>
-					<option value="Interviewing">Interviewing</option>
-					<option value="Successful">Successful</option>
-					<option value="Rejected">Rejected</option>
-					<option value="Not Interested">Not Interested</option>
-				</Form.Control >
-			</Form >
-		</>
-	);
+		<Form onChange={handleOptionChange} >
+			<Form.Label>Search by status:</Form.Label>
+			<Form.Control as="select">
+				{optionList}
+			</Form.Control >
+		</Form >
+	)
+
 }
 
 export default SearchRoles;
+
+
+
