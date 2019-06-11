@@ -14,6 +14,7 @@ export default (state = initialState,action) => {
 			const index = state.roles.indexOf(matchedRole)
 			return {selectedRole: action.selectedRole,roles: [...state.roles.slice(0,index),action.selectedRole,...state.roles.slice(index + 1)]}
 		case 'ADD_ROLE':
+			alert("Role was added succesfully!")
 			return {...state,roles: action.role}
 		default:
 			return state
