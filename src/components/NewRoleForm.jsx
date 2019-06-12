@@ -48,8 +48,8 @@ class NewRoleForm extends Component {
 			alert(validatedArray.join('  |  '))
 		} else {
 			this.props.addRole(this.state.formData)
+			this.resetLocalState()
 		}
-		this.resetLocalState()
 	}
 
 	resetLocalState = () => {
