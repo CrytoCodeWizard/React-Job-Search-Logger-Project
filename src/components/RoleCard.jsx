@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card'
 import '../index.css'
 
 import SearchRoles from './SearchRoles'
+import LikesButton from './LikesButton'
 
 class RoleCard extends React.Component {
 	state = {
@@ -41,6 +42,7 @@ class RoleCard extends React.Component {
 					<Card.Text>
 						<small>Status: {role.status}</small>
 					</Card.Text>
+					<LikesButton />
 				</Card.Body>
 			</Card >
 		)
