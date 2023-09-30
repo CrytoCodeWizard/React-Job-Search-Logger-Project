@@ -10,18 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This application requires backend and front end applications which are logged in separate repos in GitHub.
 
-This document is part of the frontend:
-https://github.com/Nadiafa/job-search-logger-frontend
-
-The  backend lives in:
-https://github.com/Nadiafa/job-search-logger-backend
-
 To use the application please clone the repositories and run the servers for both front and backends - they are set to run in ports 3000 and 3001 respectively by default.
-
-## Installation
-
-Clone from Github:
-* `$ git clone git@github.com:Nadiafa/job-search-logger-frontend.git`
 
 Execute from project directory:
 * Run `npm install`
@@ -60,13 +49,8 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/Nadiafa/job-search-logger-frontend. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
 The application is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Job Search Logger project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/Nadiafa/job-search-logger-frontend/blob/master/CODE_OF_CONDUCT.md).
